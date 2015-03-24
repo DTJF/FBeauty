@@ -2,3 +2,4 @@ $ cat .gitignore
 
 release/**/*
 src/FBeauty
+FBeauty.geany

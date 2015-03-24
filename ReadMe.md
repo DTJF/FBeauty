@@ -71,5 +71,5 @@ line options:
 Further Information
 ===================
 
--[Forum (en)](http://www.freebasic.net/forum/viewtopic.php?p=146522)
--[Former download page (de)](http://www.freebasic-portal.de/downloads/ides-fuer-freebasic/fbeauty-bas-160.html)
+- [Forum (en)](http://www.freebasic.net/forum/viewtopic.php?p=146522)
+- [Former download page (de)](http://www.freebasic-portal.de/downloads/ides-fuer-freebasic/fbeauty-bas-160.html)

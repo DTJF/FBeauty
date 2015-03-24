@@ -1,6 +1,6 @@
-' This is file FBeauty.bas, version 0.1
+' This is file FBeauty.bas, version 1.01
 ' Licence: GPLv3
-' (C) 2010-2013 Thomas.Freiherr@gmx.net
+' (C) 2010-2015 Thomas[ dOt }Freiherr{ at }gmx{ DoT ]net
 '
 ' This program is free software; you can redistribute it
 ' and/or modify it under the terms of the GNU General Public

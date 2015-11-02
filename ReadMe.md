@@ -1,5 +1,11 @@
 Welcome to project *FBeauty*, a [FreeBASIC](http://www.freebasic.net/)
-source code beautyfier. It
+source code beautyfier. It can get started
+
+- from the command line or
+
+- as a Geany IDE custom command
+
+and then
 
 - parses source code,
 
@@ -12,7 +18,7 @@ Comments and string literals stay unchanged. The package contains the
 source code of the tool, to be compiled with the FreeBASIC compiler.
 
 Find further information at the forum page
-http://www.freebasic.net/forum/viewtopic.php?p=190158.
+http://www.freebasic.net/forum/viewtopic.php?p=146522.
 
 
 Licence

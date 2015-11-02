@@ -1,12 +1,24 @@
-Welcome to project *FBeauty*, an FreeBasic source code beautyfier. The
-package contains the source code of the tool, to be compiled with the
-FreeBASIC compiler.
+Welcome to project *FBeauty*, a [FreeBASIC](http://www.freebasic.net/)
+source code beautyfier. It
+
+- parses source code,
+
+- identifies the keywords and
+
+- formats them in consistent letter cases (UPPER CASE, lower case,
+  CamelCase or custom).
+
+Comments and string literals stay unchanged. The package contains the
+source code of the tool, to be compiled with the FreeBASIC compiler.
+
+Find further information at the forum page
+http://www.freebasic.net/forum/viewtopic.php?p=190158.
 
 
 Licence
 =======
 
-Copyright &copy; 2011-2015 by DTJF
+Copyright &copy; 2011-2015 by DTJF (Thomas{ At ]Freiherr{ at }gmx[ dOt ]net)
 
 The source code of this bundle is free software; you can redistribute
 it and/or modify it under the terms of the GNU General Public License

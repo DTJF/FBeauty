@@ -1,6 +1,14 @@
 Changelog
 =========
 
+Version 1.04
+------------
+
+- THISFIX preprocessors define added, handling 'THIS.' and '@THIS->'
+
+Published on 2018, August 2.
+
+
 Version 1.01
 ------------
 

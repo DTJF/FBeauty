@@ -1,6 +1,6 @@
-' This is file FBeauty.bas, version 1.01
+' This is file FBeauty.bas, version 1.04
 ' Licence: GPLv3
-' (C) 2010-2015 Thomas[ dOt }Freiherr{ at }gmx{ DoT ]net
+' (C) 2010-2018 Thomas[ dOt }Freiherr{ at }gmx{ DoT ]net
 '
 ' This program is free software; you can redistribute it
 ' and/or modify it under the terms of the GNU General Public
@@ -13,14 +13,15 @@
 ' Lesser General Public License for more details, refer to:
 ' http://www.gnu.org/licenses/gpl-3.0.html
 
-'#DEFINE DIALECTS
+'#DEFINE DIALECTS ' support for  keywords related to FB dialects
+'#DEFINE THISFIX  ' support for THIS./@THIS->
 
 ' evaluate command line   / Kommandozeile auswerten
-' no options = upper case / keine Option = Grossbuchstaben
 DIM SHARED AS INTEGER Modus
 Modus = IIF(INSTR(COMMAND, "-l"), 1, _ '    lower case keywords
         IIF(INSTR(COMMAND, "-c"), 2, _ '   capitalized keywords
         IIF(INSTR(COMMAND, "-i"), 3, 0))) ' individual keywords
+' no options = upper case / keine Option = Grossbuchstaben
 
 DIM SHARED  AS UBYTE Char, Check(255)
 DIM SHARED AS STRING Wort
@@ -550,6 +551,13 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE         "TYPE" : RETURN Cases(w, @"Type")
         CASE       "TYPEOF" : RETURN Cases(w, @"TypeOf")
       END SELECT
+#IFDEF THISFIX
+      IF LEFT(w, 4) = "THIS" THEN
+        SELECT CASE AS CONST ASC(w, 5)
+        CASE ASC("."), ASC("-") : MID(T, 1, 4) = Cases(LEFT(w, 4), @"This")
+        END SELECT
+      END IF
+#ENDIF
     CASE ASC("U")
       SELECT CASE w
         CASE   "UBOUND" : RETURN Cases(w, @"UBound")

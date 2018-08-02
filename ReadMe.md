@@ -45,7 +45,7 @@ http://www.gnu.org/licenses/gpl-3.0.html
 Description
 ===========
 
-The programm acts like a filter, identyfying FreeBasic keywords in the
+The programm acts like a filter, identyfying FreeBASIC keywords in the
 input stream (StdIn) and by default replaces them by their upper-case
 equivalents in the output stream (StdOut). All other words and
 characters get passed unchanged. The filter neither works in comments
@@ -55,7 +55,7 @@ nor in strings.
 Installation
 ============
 
-The program is designed for use in Geany, an FreeBasic-IDE for LINUX
+The program is designed for use in Geany, an FreeBASIC-IDE for LINUX
 and win. As a compiled binary it can be added to Geany as a `sent text`
 custom command. Just go to menu `Edit -> Format -> Send text -> Set
 Custom Commands` and click in that dialog on `Add` to get a new text
@@ -64,8 +64,8 @@ on, the current selection can get send to FBeauty and the filtered
 output of FBeauty will be used to replace the current selection.
 
 
-Usage
-=====
+Further Usage
+=============
 
 FBeauty can also be used at the command line by reading the input from
 a file. E. g. on LINUX type `./FBeauty < Input.txt > Output.bas` to
@@ -84,6 +84,29 @@ line options:
 |     -l | lower case keywords                             |
 |     -c | capitalized keywords                            |
 |     -i | individual keywords (as defined in source code) |
+
+
+Special compiling
+=================
+
+By default FB dialect keywords are not supported, unless you set the
+preprocessors define `DIALECTS`, either by uncommenting the source code
+line `'#DEFINE DIALECTS`, or at the compiler commend line like
+
+~~~{txt}
+fbc -w all -d DIALECTS FBeauty.bas
+~~~
+
+The preprocessors define `THISFIX` makes it handle the keywort `THIS`
+correctly, when followed by a dot operator:
+
+~~~{txt}
+fbc -w all -d THISFIX FBeauty.bas
+~~~
+
+\note This slows down the handling of all words starting with a `T`
+      character. Since that `THIS.` code is not neccessary, this
+      feature is implemented as an option.
 
 
 Further Information

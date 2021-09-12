@@ -171,6 +171,7 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
       END SELECT
     CASE ASC("B")
       SELECT CASE w
+        CASE     "BASE" : RETURN Cases(w, @"Base")
         CASE     "BEEP" : RETURN Cases(w, @"Beep")
         CASE      "BIN" : RETURN Cases(w, @"Bin")
         CASE   "BINARY" : RETURN Cases(w, @"Binary")
@@ -183,7 +184,6 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE     "BYTE" : RETURN Cases(w, @"Byte")
         CASE    "BYREF" : RETURN Cases(w, @"ByRef")
         CASE    "BYVAL" : RETURN Cases(w, @"ByVal")
-        CASE     "BASE" : RETURN Cases(w, @"Base")
       END SELECT
     CASE ASC("C")
       SELECT CASE w
@@ -192,7 +192,7 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE         "CALLS" : RETURN Cases(w, @"Calls")
         CASE          "CASE" : RETURN Cases(w, @"Case")
         CASE          "CAST" : RETURN Cases(w, @"Cast")
-        CASE         "CBOOL" : RETURN Cases(w, @"Cbool")
+        CASE         "CBOOL" : RETURN Cases(w, @"CBool")
         CASE         "CBYTE" : RETURN Cases(w, @"CByte")
         CASE          "CDBL" : RETURN Cases(w, @"CDbl")
         CASE         "CDECL" : RETURN Cases(w, @"CDecl")
@@ -260,7 +260,6 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE     "DECLARE" : RETURN Cases(w, @"Declare")
         CASE     "DEFBYTE" : RETURN Cases(w, @"DefByte")
         CASE      "DEFDBL" : RETURN Cases(w, @"DefDbl")
-        CASE      "DEFINE" : RETURN Cases(w, @"Define")
         CASE     "DEFINED" : RETURN Cases(w, @"Defined")
         CASE      "DEFINT" : RETURN Cases(w, @"DefInt")
         CASE      "DEFLNG" : RETURN Cases(w, @"DefLng")
@@ -370,8 +369,6 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE             "IMP" : RETURN Cases(w, @"Imp")
         CASE      "IMPLEMENTS" : RETURN Cases(w, @"Implements")
         CASE          "IMPORT" : RETURN Cases(w, @"Import")
-        CASE          "INCLIB" : RETURN Cases(w, @"IncLib")
-        CASE         "INCLUDE" : RETURN Cases(w, @"Include")
         CASE           "INKEY" : RETURN Cases(w, @"InKey")
         CASE             "INP" : RETURN Cases(w, @"Inp")
         CASE           "INPUT" : RETURN Cases(w, @"Input")
@@ -381,7 +378,7 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE         "INTEGER" : RETURN Cases(w, @"Integer")
         CASE              "IS" : RETURN Cases(w, @"Is")
         CASE          "ISDATE" : RETURN Cases(w, @"IsDate")
-        CASE    "ISREDIRECTED" : RETURN Cases(w, @"IsRedirected")
+        CASE    "ISREDIRECTED" : RETURN Cases(w, @"IsReDirected")
       END SELECT
     CASE ASC("K")
       SELECT CASE w
@@ -484,7 +481,7 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE       "POS" : RETURN Cases(w, @"Pos")
         CASE       "POP" : RETURN Cases(w, @"Pop")
         CASE  "PRESERVE" : RETURN Cases(w, @"Preserve")
-        CASE    "PRESET" : RETURN Cases(w, @"PreSet")
+        CASE    "PRESET" : RETURN Cases(w, @"PReset")
         CASE     "PRINT" : RETURN Cases(w, @"Print")
         CASE   "PRIVATE" : RETURN Cases(w, @"Private")
         CASE   "PROCPTR" : RETURN Cases(w, @"ProcPtr")
@@ -504,9 +501,9 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE "REALLOCATE" : RETURN Cases(w, @"ReAllocate")
         CASE      "REDIM" : RETURN Cases(w, @"ReDim")
         CASE        "REM" : RETURN Cases(w, @"Rem")
-        CASE      "RESET" : RETURN Cases(w, @"ReSet")
+        CASE      "RESET" : RETURN Cases(w, @"Reset")
         CASE    "RESTORE" : RETURN Cases(w, @"ReStore")
-        CASE     "RESUME" : RETURN Cases(w, @"ReSume")
+        CASE     "RESUME" : RETURN Cases(w, @"Resume")
         CASE     "RETURN" : RETURN Cases(w, @"Return")
         CASE        "RGB" : RETURN Cases(w, @"RGB")
         CASE       "RGBA" : RETURN Cases(w, @"RGBA")
@@ -606,7 +603,6 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE "UINTEGER" : RETURN Cases(w, @"UInteger")
         CASE    "ULONG" : RETURN Cases(w, @"ULong")
         CASE "ULONGINT" : RETURN Cases(w, @"ULongInt")
-        CASE    "UNDEF" : RETURN Cases(w, @"UnDef")
         CASE    "UNION" : RETURN Cases(w, @"Union")
         CASE   "UNLOCK" : RETURN Cases(w, @"UnLock")
         CASE "UNSIGNED" : RETURN Cases(w, @"UnSigned")
@@ -616,9 +612,9 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
       END SELECT
     CASE ASC("V")
       SELECT CASE w
-        CASE   "VA_ARG" : RETURN Cases(w, @"VA_Arg")
-        CASE "VA_FIRST" : RETURN Cases(w, @"VA_First")
-        CASE  "VA_NEXT" : RETURN Cases(w, @"VA_Next")
+        CASE   "VA_ARG" : RETURN Cases(w, @"Va_Arg")
+        CASE "VA_FIRST" : RETURN Cases(w, @"Va_First")
+        CASE  "VA_NEXT" : RETURN Cases(w, @"Va_Next")
         CASE      "VAL" : RETURN Cases(w, @"Val")
         CASE    "VAL64" : RETURN Cases(w, @"Val64")
         CASE   "VALINT" : RETURN Cases(w, @"ValInt")

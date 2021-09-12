@@ -24,7 +24,7 @@ http://www.freebasic.net/forum/viewtopic.php?p=146522.
 Licence
 =======
 
-Copyright &copy; 2011-2015 by DTJF (Thomas{ At ]Freiherr{ at }gmx[ dOt ]net)
+Copyright &copy; 2011-2021 by DTJF (Thomas{ At ]Freiherr{ at }gmx[ dOt ]net)
 
 The source code of this bundle is free software; you can redistribute
 it and/or modify it under the terms of the GNU General Public License
@@ -91,7 +91,7 @@ Special compiling
 
 By default FB dialect keywords are not supported, unless you set the
 preprocessors define `DIALECTS`, either by uncommenting the source code
-line `'#DEFINE DIALECTS`, or at the compiler commend line like
+line `'#DEFINE DIALECTS`, or at the compiler command line like
 
 ~~~{txt}
 fbc -w all -d DIALECTS FBeauty.bas
@@ -105,7 +105,7 @@ fbc -w all -d THISFIX FBeauty.bas
 ~~~
 
 \note This slows down the handling of all words starting with a `T`
-      character. Since that `THIS.` code is not neccessary, this
+      character. Since the syntax `THIS.` is not neccessary, this
       feature is implemented as an option.
 
 

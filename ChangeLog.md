@@ -1,6 +1,14 @@
 Changelog
 =========
 
+Version 1.08
+------------
+
+- keyword update to fbc 1.08
+
+Published on 2021, Sep.
+
+
 Version 1.04
 ------------
 

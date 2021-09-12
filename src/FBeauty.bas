@@ -1,4 +1,4 @@
-' This is file FBeauty.bas, version 1.04
+' This is file FBeauty.bas, version 1.08
 ' Licence: GPLv3
 ' (C) 2010-2021 Thomas[ dOt }Freiherr{ at }gmx{ DoT ]net
 '

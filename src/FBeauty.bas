@@ -699,10 +699,9 @@ Check(ASC(">")) = 1
 Check(ASC(".")) = 1
 Check(ASC("$")) = 1
 Check(ASC("#")) = 1
-Check(ASC("2")) = 1
-Check(ASC("3")) = 1
-Check(ASC("4")) = 1
-Check(ASC("6")) = 1
+FOR i AS INTEGER = ASC("0") TO ASC("9")
+  Check(i) = 1
+NEXT
 FOR i AS INTEGER = ASC("A") TO ASC("Z")
   Check(i) = 1
   Check(i + 32) = 1

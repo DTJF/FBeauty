@@ -1,6 +1,6 @@
 ' This is file FBeauty.bas, version 1.08
 ' Licence: GPLv3
-' (C) 2010-2021 Thomas[ dOt }Freiherr{ at }gmx{ DoT ]net
+' (C) 2010-2022 Thomas[ dOt }Freiherr{ at }gmx{ DoT ]net
 '
 ' This program is free software; you can redistribute it
 ' and/or modify it under the terms of the GNU General Public
@@ -18,9 +18,8 @@
 
 ' evaluate command line   / Kommandozeile auswerten
 DIM SHARED AS INTEGER Modus
-Modus = IIF(INSTR(COMMAND, "-l"), 1, _ '    lower case keywords
-        IIF(INSTR(COMMAND, "-c"), 2, _ '   capitalized keywords
-        IIF(INSTR(COMMAND, "-i"), 3, 0))) ' individual keywords
+Modus = IIF(INSTR(COMMAND, "-l"), 1, _   '  lower case keywords
+        IIF(INSTR(COMMAND, "-c"), 2, 0)) ' capitalized keywords
 ' no options = upper case / keine Option = Grossbuchstaben
 
 DIM SHARED  AS UBYTE Char, Check(255)
@@ -304,10 +303,8 @@ FUNCTION Change(BYREF T AS STRING) AS STRING
         CASE      "ERR" : RETURN Cases(w, @"Err")
         CASE    "ERROR" : RETURN Cases(w, @"Error")
         CASE    "EVENT" : RETURN Cases(w, @"Event")
-        CASE   "ESCAPE" : RETURN Cases(w, @"Escape")
         CASE     "EXEC" : RETURN Cases(w, @"Exec")
         CASE  "EXEPATH" : RETURN Cases(w, @"ExePath")
-        CASE "EXPLICIT" : RETURN Cases(w, @"Explicit")
         CASE     "EXIT" : RETURN Cases(w, @"Exit")
         CASE      "EXP" : RETURN Cases(w, @"Exp")
         CASE   "EXPORT" : RETURN Cases(w, @"Export")

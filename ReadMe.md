@@ -24,7 +24,7 @@ http://www.freebasic.net/forum/viewtopic.php?p=146522.
 Licence
 =======
 
-Copyright &copy; 2011-2022 by DTJF (Thomas{ At ]Freiherr{ at }gmx[ dOt ]net)
+Copyright &copy; 2011-2024 by DTJF (Thomas{ At ]Freiherr{ at }gmx[ dOt ]net)
 
 The source code of this bundle is free software; you can redistribute
 it and/or modify it under the terms of the GNU General Public License
